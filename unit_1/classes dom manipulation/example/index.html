@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shoebill Javascript Debugging Lab</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <div class="main">
+    </div>
+    <script>
+      try {
+        /* This is the code you want to look at */
+        var myName = "Bryan";
+        var myAge = 100;
+        new User(myName, myAge);
+
+        function User(name, age){
+          var user = this;
+          user.name = name;
+          user.age = age;
+          getFirstAndLastName();
+
+          function getFirstAndLastName(){
+            var names = user.name.split(' ');
+            user.first_name = names[0];
+            user.last_name = names[1];
+            greetEnthusiastically();
+          }
+
+          function greetEnthusiastically(){
+            document
+              .querySelector('h1')
+              .append(
+                ' ' + user.first_name.toUpperCase()
+                + ' ' + user.last_name.toUpperCase()
+                + '!'
+               );
+          }
+        }
+        /* Don't need to look further than this */
+      } catch(err){
+        document.querySelector('.main').classList.add('error');
+        document.querySelector('h1').innerHTML = 'There is an error in the code. Open the console';
+        console.log(err.message, err.name);
+      }
+    </script>
+  </body>
+</html>
+

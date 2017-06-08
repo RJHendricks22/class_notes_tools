@@ -1,0 +1,21 @@
+body {
+  background: black;
+}
+
+.main {
+  width: 100%;
+  height: 360px;
+  position: absolute;
+  bottom: 0;
+}
+
+.error {
+  background: url(../img/shoebill.jpg) center 0 no-repeat;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Menlo", "Helvetica", "Sans-serif";
+  color: #d7ff45;
+  text-align: center;
+}
