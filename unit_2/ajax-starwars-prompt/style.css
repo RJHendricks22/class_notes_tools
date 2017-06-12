@@ -1,0 +1,29 @@
+body{
+  text-align: center;
+  background-color: black;
+  font-family: helvetica;
+  padding-left: 100px;
+}
+#logo{
+  background-image: url(http://i.imgur.com/r8cooMc.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:400px;
+  margin-top: 20px;
+  height:200px;
+}
+#container{
+  width: 400px;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 20px 10px teal;
+}
+p{
+  margin-left: 30px;
+  text-align: left;
+  color:white;
+}
+#name{
+  font-size: 32pt;
+}
