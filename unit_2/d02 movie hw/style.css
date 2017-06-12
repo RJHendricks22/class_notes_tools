@@ -1,0 +1,27 @@
+* {
+margin: 0;
+
+}
+
+body {
+  background: url('./img/netflix_2014_logo_detail.jpg');
+  background-size: 15%;
+}
+
+.container {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid gainsboro;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.container h1, .container h5 {
+  text-align: center;
+}
+
+.container img {
+  max-height: 250px;
+  display: block;
+  margin: 0 auto;
+}
