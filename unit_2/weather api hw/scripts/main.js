@@ -1,10 +1,7 @@
 
 $( document ).ready(function() {
 
-  let apiKey = $.getScript("./apikey.js", function(){
-  });
-  console.log(apiKey.responseText);
-//  let apiKey = 'e688ae8003b1e44b6ed7917e2444930c'; 
+  let apiKey = $.getScript("./apikey.js", function(){});
   let submitButton = $('#submit_button');
   let submitCity = $('#city_entered');
   let domForecast = $('#forecast');
