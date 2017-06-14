@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Switch Movie Grid</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div id='header'>
+		<div id='logo'><img src='http://i.imgur.com/HF8s0jP.png'></div>
+		<div id='name'>Movies</div>
+	</div>
+	<div id='moviecontainer'>
+      <p><a href="/movies" id="latestrelease">Latest Releases</a></p>
+  {{#movies}}
+    <p>{{title}}</p>
+  {{/movies}}
+	</div>
+</body>
+<script src="scripts/jquery.js"></script>
+<script type="text/javascript" src='scripts/script.js'></script>
+</html>

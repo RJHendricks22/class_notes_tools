@@ -1,0 +1,495 @@
+body{
+	font-family: Arial,Verdana;
+	background-color: #CCC;
+	margin:0;
+}
+
+/*HEADER ELEMENTS*/
+/*HEADER ELEMENTS*/
+/*HEADER ELEMENTS*/
+#header{
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	background-color: #334455;
+	z-index: 9999;
+}
+#logo{
+	padding-top: 25px;
+	padding-left: 25px;
+}
+#name{
+	position: absolute;
+	color:#fff;
+	font-size: 20px;
+	top:40px;
+	left: 90px;
+	margin-bottom: 20px;
+}
+#account{
+	position: absolute;
+	color:#aabbcc;
+	font-size: 20px;
+	top:20px;
+	right: 40px;
+	border: 1px solid #667788;
+	padding: 5px 0px 10px 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	letter-spacing: 1.5px;
+	width: 180px;
+	cursor: pointer;
+}
+#account-dropdown{
+	font-weight: 100;
+	margin-top: 10px;
+}
+#account-dropdown{
+	display: inline-block;
+}
+
+/*MOVIES*/
+/*MOVIES*/
+/*MOVIES*/
+#moviecontainer{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 140px;
+	text-align: center;
+}
+#moviecontainer p{
+	margin: 10px;
+	font-size: 20px;
+	color: #778899;
+	padding-left: 3%;
+	padding-bottom: 15px;
+	text-align: left;
+
+}
+.posterbox{
+	position: absolute;
+	display: inline-block;
+	height: 170px;
+	width: 120px;
+	vertical-align: top;
+	margin-left: .5%;
+	margin-right: .5%;
+	margin-bottom: 40px;
+	visibility: hidden;
+}
+.poster{
+	border-radius: 5px;
+	width: 100%;
+	box-shadow: 0px 0px 10px 5px #999;
+}
+
+
+/* PAGINATION */
+/* PAGINATION */
+/* PAGINATION */
+#pagination{
+	padding-top: 20px;
+	text-align: center;
+}
+#pagination div{
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid #aaa;
+	margin: -4px;
+	background-color: #ccc;
+	color: #777;
+	cursor: pointer;
+}
+#first{
+	color: #028482 !important;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#last{
+	color: #028482 !important;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.current{
+	color: #028482 !important;
+	font-weight: bold;
+}
+#popup{
+	width:40px;
+	height: 40px;
+	top:120px;
+	left: 500px;
+	position: absolute;
+	background-color: #fff;
+	visibility: hidden;
+}
+#popup input{
+	width: 100%;
+	border: 0;
+	height: 100%;
+	background-color: #888;
+	color: #FFF;
+	text-align: center;
+	font-size: 14pt
+}
+
+/* TOOLTIP POPUP */
+/* TOOLTIP POPUP */
+/* TOOLTIP POPUP */
+[data-tooltip]:before,[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+}
+[data-tooltip]:hover:before,[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* POPUP BUBBLE */
+/* POPUP BUBBLE */
+/* POPUP BUBBLE */
+[data-tooltip]:before {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  content: attr(data-tooltip);
+}
+
+/* LITTLE ARROW FOR BUBBLE */
+/* LITTLE ARROW FOR BUBBLE */
+/* LITTLE ARROW FOR BUBBLE */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-top: 5px solid rgba(0, 0, 0, 0.7);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+}
+
+
+
+/* MODAL */
+/* MODAL */
+/* MODAL */
+.long{display:auto;}
+.short{display:none;}
+.modal{
+	display: none;
+	letter-spacing: 1.1px;
+}
+#modal{
+	position: fixed;
+	background-color: #001122;
+	top: -100;
+	left: -100;
+	height: 120%;
+	width: 140vw;
+	z-index:7;
+}
+#modalbg{
+	position: fixed;
+	top: -100;
+	left: -100;
+	height: 120%;
+	width: 140vw;
+	z-index:8;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: transparent;
+  background-attachment: fixed;
+  background-position: 20% 20%;
+	filter: blur(15px);
+  -webkit-filter: blur(15px);
+  opacity: .4
+}
+#back{
+	position: fixed;
+	left: 20px;
+	height:32px;
+	/*padding: 30 0;*/
+	width:300px;
+	top:130px;
+	z-index: 9;
+	color: #fff;
+	font-weight: lighter;
+	font-size: 14pt;
+	line-height: 1.4;
+	cursor: pointer;
+}
+#nextmovie{
+	text-align: right;
+	position: fixed;
+	right: 20px;
+	height:32px;
+	/*padding: 30 0;*/
+	width:300px;
+	top:130px;
+	z-index: 9;
+	color: #fff;
+	font-weight: lighter;
+	font-size: 14pt;
+	line-height: 1.4;
+	cursor: pointer;
+}
+#back img, #nextmovie img{
+	margin-top: -6px;
+	vertical-align: middle;
+	padding: 0px 20px;
+}
+#left{
+	margin: 0;
+	width:35%;
+	height:100vh;
+	top:220;
+	position: absolute;
+	z-index: 10;
+	left:0;
+	vertical-align: middle;
+	text-align: center;
+}
+#right_desktop{
+	margin: 0;
+	width:60%;
+	height:100vh;
+	top:220;
+	position: absolute;
+	z-index: 10;
+	left:35%;
+}
+#right_mobile{
+	visibility: hidden
+}
+#rule{
+	border-top:1px solid rgba(255,255,255,.3);
+	display: block;
+	margin-top: 50px;
+	padding-top:50;
+	width:100%;
+}
+#pipe{
+	width:1;
+	height: 30px;
+	margin: 0 20;
+	background-color: rgba(255,255,255,.3);
+	display: inline-block;
+	vertical-align: middle;
+}
+#photo{
+	height:auto;
+	width:60%;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+}
+#title{
+	position: relative;
+	height:50px;
+	width:95%;
+	top:0%;
+	z-index: 9;
+	color: #fff;
+	font-size: 32pt;
+}
+#info{
+	display: inline-block;
+	position: relative;
+	top:0;
+	height:50px;
+	/*top:9%;*/
+	z-index: 9;
+	color: #fff;
+	font-size: 16pt;
+}
+#about{
+	position: relative;
+	font-size: 16pt;
+}
+
+
+@media (max-width: 550px) {
+	body{overflow-x:hidden;}
+
+	/*HEADER*/
+	/*HEADER*/
+	/*HEADER*/
+	#header{
+		height: 70px;
+	}
+	#logo{
+		position: absolute;
+		top: -12px;
+	}
+	#name{
+		position: absolute;
+		top: 26px;
+	}
+	#account-dropdown{
+		visibility: hidden;
+		height:0px;
+	}
+	#account{
+		margin-top: -6px;
+		right: 15px;
+		width: 28px;
+		height: 28px;
+	}
+	#account span{
+		position: absolute;
+		margin-left: -16px;
+		top:6px;
+	}
+
+	/*MOVIES*/
+	/*MOVIES*/
+	/*MOVIES*/
+	#moviecontainer p{
+		padding-top: 70px;
+		padding-left: 12px !important
+	}
+	#moviecontainer{
+		padding-top: 20px !important;
+		width: 100%
+	}
+	.posterbox{
+		width: 40%;
+		margin-left: 4%;
+		margin-right:4%;
+		margin-bottom: 30px;
+		height: auto;
+	}
+	.poster{
+
+	}
+	#popup{
+		margin-left: 44%
+	}
+
+
+	/*PAGINATION*/
+	/*PAGINATION*/
+	/*PAGINATION*/
+	#pagination div{
+		border-radius: 0px;
+	}
+	#first, #prev, #next,	#last{
+		display:block !important;
+	}
+	#one,	#two,	#three,	#dots{
+		padding-left: 0px !important;
+		width:100% !important;
+	}
+	#prev{
+		margin-bottom: 3px !important
+	}
+	#next{
+		margin-top: 3px !important
+	}
+
+	/*TOOLTIP*/
+	/*TOOLTIP*/
+	/*TOOLTIP*/
+	[data-tooltip]:before {
+	  margin-left: -65px;
+	  width: 120px;
+	}
+
+
+	/*MODAL*/
+	/*MODAL*/
+	/*MODAL*/
+	#about,#info{font-size: 12pt}
+	#header{z-index: 1}
+	.long{display:none;}
+	.short{display:inline-block;}
+	#back img{padding-right:5;margin-right:5;}
+	#nextmovie img{padding-left:5;margin-left:5;}
+	#back,#nextmovie{top:3%; width:150px;z-index: 99}
+
+	#left{
+		height: 100vh;
+		width: 100vw;
+		top:70;
+		left:5%;
+		text-align: left;
+	}
+	#photo{
+		margin-top: 50px;
+		width:35%;
+	}
+	#right_desktop{
+		visibility: hidden
+	}
+	#right_mobile{
+		z-index: 9;
+		visibility: visible;
+		position: absolute;
+		top:0px;
+		left:0;
+		height: 99%;
+	}
+	#info{
+		position: absolute;
+		top:105;
+		left: 45%;
+	}
+	#info span{
+		display: block;
+	}
+	#info span .label{
+		font-weight: lighter;
+		font-size: 17pt;
+	}
+	#info span .value{
+		font-weight: bold;
+		font-size: 20pt;
+	}
+	#score,#release{
+		display: block;
+	}
+	#info #pipe{
+		visibility: hidden;
+	}
+	#about{
+		color: #fff;
+	}
+	#lower{
+		margin-left: 5%;
+		margin-top:90%;
+	}
+	#rule{
+		border-top:1px solid rgba(255,255,255,.3);
+		display: block;
+		margin-top:20px;
+		padding-top:20;
+		width:100%;
+	}
+}
+
+
+/*MEDIA QUERIES SPECIFIC FOR THE MODALS, KEEPING IT TIDY.*/
+@media (max-width: 1000px){
+	#right{top:190;}
+	#title{font-size: 24pt}
+	#about,#info{font-size: 12pt}
+	#photo{margin-top: 60px}
+}
+#latestrelease {
+  text-decoration: none;
+  color: darkblue;
+}
+#latestrelease:hover {
+  color: blue;
+}
