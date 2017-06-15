@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Building List</title>
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  </head>
+  <body>
+    <h1>Building Information</h1>
+    <a href="/" id="home"><h2>Home</h2></a>
+    <div id="building_list">
+      <ul>
+      {{#buildings}}
+        <li><a href="/buildings/{{id}}">Building Name: {{name}} </a></li>
+        <li>Address: {{address}}</li>
+        <li>Number of floors:  {{ num_floors}}</li>
+        <hr>
+        <br>
+      {{/buildings}}
+      </ul>
+    </div>
+  </body>
+</html>

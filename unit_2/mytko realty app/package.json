@@ -1,0 +1,21 @@
+{
+  "name": "u02_d07_homework",
+  "version": "1.0.0",
+  "description": "![Bryan Mytko](mytko_reality.jpg) > “As soon as the land of any country has all become private property, > the landlords, like all other men, love to reap where they never sowed, > and demand a rent even for its natural produce. ”",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "mustache-express": "^1.2.4",
+    "pg-promise": "^5.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:RJHendricks22/u02_d07_homework.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Apartment Listing</title>
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  </head>
+  <body>
+    <h1>Apartments Information</h1>
+    <a href="/" id="home"><h2>Home</h2></a>
+    <div id="apartment_list">
+      <ul>
+      {{#apartments}}
+        <li><a href="/apartments/{{id}}">Apartment #: {{name}} </a></li>
+        <li>Price: {{price}}</li>
+        <li>Square Foot: {{sqft}}</li>
+        <li>Bedrooms: {{bedrooms}}</li>
+        <li>Bathrooms: {{bathrooms}}</li>
+        <li>Building #: {{building_id}}</li>
+        <hr>
+        <br>
+      {{/apartments}}
+      </ul>
+    </div>
+  </body>
+</html>
