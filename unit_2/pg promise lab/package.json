@@ -1,0 +1,23 @@
+{
+  "name": "shoebill-pg",
+  "version": "1.0.0",
+  "description": "A Shoebill lesson on PG-Promise",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Mytko",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mustache": "^2.2.1",
+    "mustache-express": "^1.2.2",
+    "pg-promise": "^5.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:RJHendricks22/u02_d06_pg-promise.git"
+  }
+}

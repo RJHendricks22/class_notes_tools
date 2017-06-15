@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="border-container">
+        <h1>{{title}} Info</h1>
+        <img src="http://blackcommerce.org/eagleawards/wp-content/uploads/2014/03/divider-51.png" class="divider">
+        <ul>
+          {{#info}}
+          <li>
+          <span class="name">
+            {{name}} &#183;
+            <span class="price">${{price}}</span>
+            <span class="description">
+              {{category}}
+              {{country}}
+              {{alcohol}}%
+            </span>
+          </span>
+          </li>
+          {{/info}}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
