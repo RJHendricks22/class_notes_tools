@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Planet List</title>
+  </head>
+
+  <body>
+    
+    <h1>List of Planets:</h1>
+    <hr><br>
+    <a class="redirect" href="/" >Home</a>
+    <ul id="planetList">
+      {{#planet}}
+      <li><a href="/planets/{{planet}}">Planet {{planet}}</a></li>
+      {{/planet}}
+    </ul>
+    
+  </body>
+
+</html>

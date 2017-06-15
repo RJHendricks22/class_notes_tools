@@ -1,0 +1,110 @@
+html {
+  background-image: linear-gradient(lightblue, darkgreen);
+  background-image: -webkit-linear-gradient(lightblue, darkgreen);
+  background-image: -moz-linear-gradient(lightblue, darkgreen);
+  height: 100%;
+}
+.longPage{
+  background-image: linear-gradient(lightblue, darkgreen);
+  background-image: -webkit-linear-gradient(lightblue, darkgreen);
+  background-image: -moz-linear-gradient(lightblue, darkgreen);
+  height: auto;
+}
+h1 {
+  color: darkred;
+  text-align: center;
+  background-color: lightgray;
+  width: 60%;
+  margin-left: 3%;
+  box-shadow: 5px 5px 5px black;
+  padding: 20px;
+}
+#creatureblock {
+  background-color: gray;
+  width: 600px;
+  margin-left: 20%;
+  padding: 20px 20px 20px 80px;
+  box-shadow: 5px 5px 5px black;
+}
+#creatureblock li {
+  font-size: 25px;
+  list-style-type: none;
+  padding: 3px;
+}
+#creatureblock a {
+  text-decoration: none;
+  color: white;
+}
+#creatureblock a:hover {
+  color: deepskyblue;
+}
+.redirect {
+  background-color: lightgray;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid blue;
+  border-radius: 5px;
+  margin: 20px;
+}
+.redirect:hover{
+  background-color: gray;
+  color: white;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+#planetList {
+  margin: 3%;
+  padding: 20px 50px;
+  background-color: gray;
+  list-style-type: none;
+  text-decoration: none;
+  width: 25%;
+  box-shadow: 5px 5px 5px black;
+}
+#planetList a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 15px;
+  line-height: 50px;
+}
+#mainList {
+  margin: 3%;
+  padding: 20px 50px;
+  background-color: gray;
+  list-style-type: none;
+  text-decoration: none;
+  width: 35%;
+  box-shadow: 5px 5px 5px black;
+}
+#mainList a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 15px;
+  line-height: 50px;
+}
+#mainList a:hover{
+  color: deepskyblue;
+  text-decoration: none;
+}
+#planetList a:hover{
+  color: deepskyblue;
+  text-decoration: none;
+}
+#newForm {
+  font-size: 30px;
+  background-color: lightgray;
+  width: 50%;
+  text-align: center;
+  margin: 5%;
+  padding: 10px;
+  line-height: 50px;
+}
+#newForm input {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  margin-left: 15px;
+}
