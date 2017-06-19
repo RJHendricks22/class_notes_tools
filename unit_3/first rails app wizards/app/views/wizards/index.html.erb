@@ -1,0 +1,12 @@
+<h1>Wizards</h1>
+<% @wizards.each do |wizard| %>
+  <div>
+    <h3>
+      <a href="/wizards/<%= wizard.id %>">
+        <%= wizard.name %>
+      </a>
+    </h3>
+    <p>wand_type: <%= wizard.wand_type %></p>
+    <p>power: <%= wizard.power %></p>
+  </div>
+<% end %>

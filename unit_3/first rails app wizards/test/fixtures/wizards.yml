@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  wand_type: MyString
+  age: 1
+  beard_color: MyString
+  power: MyString
+
+two:
+  name: MyString
+  wand_type: MyString
+  age: 1
+  beard_color: MyString
+  power: MyString
