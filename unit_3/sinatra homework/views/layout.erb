@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Homework 3 Sinatra practice!</h1>
+    <h2>Try typing in instructor's names, rick and morty tea or battle time, or some trivia!</h2>
+    <div class="container">
+      <h1>Response:</h1>
+      <%= yield %>
+    </div>
+    <br>
+    <br>
+    <h3>or just check out these links:</h3>
+    <ul>
+      <li><h3><a href='/name/john'>John</a></h3></li>
+      <li><h3><a href='/name/bryan'>Bryan</a></h3></li>
+      <li><h3><a href='/name/stefan'>Stefan</a></h3></li>
+      <li><h3><a href='/name/taj'>Taj</a></h3></li>
+      <li><h3><a href='/name/turtles'>Just don't try this one!</a></h3></li>
+    </ul>
+  </body>
+</html>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/script.js" type="text/javascript"></script>

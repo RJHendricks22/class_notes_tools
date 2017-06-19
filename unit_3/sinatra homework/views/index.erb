@@ -1,0 +1,23 @@
+
+
+<% if @name == 'john' %>
+  <h2>Hello John!</h2>
+<% elsif @name == 'bryan' %>
+  <h2>Hello Bryan!</h2>
+<% elsif @name == 'stefan' %>
+  <h2>Hello Stefan!</h2>
+<% elsif @name == 'taj' %>
+  <h2>Hello Taj!</h2>
+<% elsif @name == 'turtles' %>
+  <h2 style="color:red;">Turtles are weak, and decadent! Only the Shoebill is strong.</h2>
+<% else %>
+  <h2>Try one of these names:</h2>
+    <ul>
+      <li><h3><a href='/name/john'>John</a></h3></li>
+      <li><h3><a href='/name/bryan'>Bryan</a></h3></li>
+      <li><h3><a href='/name/stefan'>Stefan</a></h3></li>
+      <li><h3><a href='/name/taj'>Taj</a></h3></li>
+      <li><h3><a href='/name/turtles'>Just don't try this one!</a></h3></li>      
+    </ul>
+<% end %>
+
