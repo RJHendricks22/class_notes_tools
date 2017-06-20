@@ -1,0 +1,12 @@
+<%= render 'header' %>
+
+<div id="container">
+  <ul>
+    <% @cheeses.each do |cheese| %>
+    <li><a href="/cheeses/<%=cheese[:id]%>"><%= cheese[:name] %></a> - <%= link_to "Eat this Cheese!", cheese, method: :delete %><br></li><br>
+    <% end %>
+  </ul>
+  <h3><a href="/cheeses/new" >Add a new cheese!</a></h3>
+</div>
+
+<%= render 'footer' %>

@@ -1,0 +1,52 @@
+class Animal
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+end
+
+module Karate
+  # Lets our animals do karate
+  def kick_and_punch
+    rand(1..10)
+  end
+end
+
+class Shoebill < Animal
+  include Karate
+end
+
+class Turtle < Animal
+  include Karate
+end
+
+puts "A battle is about to begin..."
+
+class Tournament
+  def self.fight(a1, a2)
+    a1_attack = a1.kick_and_punch
+    puts "#{a1.name} attacks for #{a1_attack} damage!"
+    a2_attack = a2.kick_and_punch
+    puts "#{a2.name} attacks for #{a2_attack} damage!"
+
+
+    if a1_attack == a2_attack
+      puts "It was a draw."
+    elsif a1_attack > a2_attack
+      puts "#{a1.name} is the winner!!!"
+    elsif a1_attack < a2_attack
+      puts "#{a2.name} is the winner!!!"
+    end
+
+    puts "The battle has finished."
+  end
+end
+
+shoebill = Shoebill.new("Shoebill")
+turtle = Turtle.new("Turtle")
+
+p shoebill.kick_and_punch
+p turtle.kick_and_punch
+
+Tournament.fight(shoebill, turtle)

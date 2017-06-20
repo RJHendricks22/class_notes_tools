@@ -1,0 +1,95 @@
+rails new blog
+cd blog
+
+rails g controller posts
+rails g controller comments
+// now we have comments and posts
+
+cd routes.rb
+
+resources :posts, :comments
+
+rails routes
+// did it work?
+
+app/views/posts
+touch index.html.erb
+
+rails g model post
+// generator made files with generator for us - uses code to build post table with no columns
+
+db/migrate/83409238402/post
+
+(v)
+
+t.string :title
+t.string :description
+
+rails db:setup?
+rails db:migrate
+
+DON'T DO THIS
+rails db:rollback
+// undo previous migration
+rails db:migrate
+
+rails c
+// > irb
+// Post
+
+rails g migration changePostColumnToContent
+// makes migration file db/migrate/43984029483/change_post_to_column
+
+(v)
+
+rename_column :posts, :description, :content
+rails db:migrate
+
+// NOW we have a posts table with a column called content instead of description
+
+// FOREIGN KEY STUFF
+rails g model comment content:string post:references name:string
+
+add this on to the table that you expect to get the foreign key!!!
+
+rails db:migrate
+
+rails c
+Post.create(title: "My Opinion", content: "I think politics are worth talking about")
+commit transaction
+
+(already in model/comment.rb)
+*** belongs_to :post
+// == post_id should always relate to post object with model
+
+// not automtically built because post.rb is already created
+// must add to post.rb
+*** has_many :comments
+
+(vv) instead of (vv)
+
+Comment.create(content: "I think politics are worth talking about", name: "Egg", post_id: 1)
+*OR*
+Comment.create(content: "Valid point", name: "Egg123", post: p)
+// will automatically link comment to connect post with p
+
+@p = Post.first
+@comments = @post.comments
+*OR*
+c = Comment.first
+c.post
+
+in posts_controller.rb
+class PostsController < ApplicationController
+  def show
+    @post = Post.find(params[:id])
+    @comments = @post.comments
+  end
+end
+
+app/views
+touch show.html.erb
+
+IN SHOW:
+<h1><%= @posts.title %></h1>
+<p><%= @posts.content %></p>

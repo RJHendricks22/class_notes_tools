@@ -1,0 +1,141 @@
+rails new real\_rocks --database=postgresql
+// we are going to use postgres at the database
+// installing all gems and files
+
+******* cd real_rocks
+// DON'T FORGET THIS STEP
+
+rails db:create
+// create database
+    Created database 'real_rocks_development'
+    Created database 'real_rocks_test'
+
+rails s
+// check server for Yay! Rails!
+
+rails generate controller rocks
+// create a controller for rocks
+// create .rb files
+// this shows all rocks - controller defines all logic for when we're looking for routes (A.K.A. def index ... end)
+
+subl config/routes.rb
+// define routes!!!
+
+get "/rocks", to: "rocks#index"
+get "/rocks/:id", to: "rocks#show"
+*OR*
+resources :rocks
+// shortcut in rails!!! resource that allows for all the CRUD intentions
+
+// index method inside of rocks controller
+// go to rocks controller and look for index method and go to index
+
+subl rocks_controller.rb
+
+class RocksController < ApplicationController
+  
+  def index
+    @rocks = Rock.all
+  end
+  
+  def show
+    @rock = Rock.find(params[:id])
+  end
+  
+end
+
+rails routes
+
+rails generate model Rocks name:string description:string image:string
+// before we can seed the database, we need a model
+
+// *OR* you can create the blank files and fill them our yourself
+rails generate model Rocks
+
+rails db:migrate
+// create_table(:rocks)
+// just created out schema!
+
+**** rails db:drop
+// drops the database
+
+subl db/migrate/4908350948_create_seeds.rb
+// check that all of the contents are in the table/model generated from command line
+
+rails db:seed
+
+touch index.html.erb
+
+<div>
+  <% @rocks.each do |rock| %>
+    <li><a href="rocks/<%=rock[:id]%>"> <%= rock[:name] %> </a><li>
+  <% end %>
+</div>
+
+touch show.html.erb
+
+<h1>This is <%= @rock[:name] %>'s
+<ul>
+  <li>Description: <%= @rock[:description] %></li>
+  <li><img style="width:50%; height:auto" src="<%= @rock[:description] %>"/></li>
+</ul>
+
+touch edit.html.erb
+
+subl app/controller/rocks_controller.rb
+
+  def edit
+    @rock = Rock.find(params[:id])
+  end
+  
+  subl edit.html.erb
+
+<% form_for @rock do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <%= f.submit %>
+<% end %>
+
+def update
+    @rock = Rock.find(params[:id])
+    @rock.update(
+      name: params[:rock][:name],
+      description: params[:rock][:description],
+      image: params[:rock][:image]
+    )
+    redirect_to "/rocks/#{@rock.id}"
+  end
+
+*** ADDED THE EDIT ROUTE IN ROUTES.RB - didn't work - CHANGED TO...
+
+get "/rocks/:id", to: "rocks#show"
+
+resources :rocks
+
+WORKED...?***
+
+Add edit link to show page
+
+subl show.html.erb
+
+...
+  <li><a href="/rocks/<%=@rock[:id]%>/edit"> Edit <%= @rock[:name] %> </a></li>
+</ul>
+
+PS...
+
+subl application.css
+
+li {
+  list-style-type: none;
+  font-size: 15px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}

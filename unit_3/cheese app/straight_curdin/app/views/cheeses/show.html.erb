@@ -1,0 +1,11 @@
+<%= render 'header' %>
+
+<div id="container">
+  <img src="<%= @cheese[:image_url] %>">
+  <h3>Cheese Name: <%= @cheese[:name] %></h3>
+  <h3>Cheese Type: <%= @cheese[:milk_type] %></h3>
+  <h3>Description: <%= @cheese[:description] %></h3>
+  <h3>Stank Level: <%= @cheese[:stank_level] %></h3>
+</div>
+
+<%= render 'footer' %>

@@ -1,0 +1,15 @@
+<%= render 'header' %>
+
+<form action="/cheeses" method="post">
+  <h2>Add a new Cheese: </h2>
+    <br>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label>Name: <input name='name' placeholder="Cheese Name" type="text"><br></label>
+    <label>Milk Type: <input name='milk_type' placeholder="Milk Type" type="text"><br></label>
+    <label>Description: <input name='description' type="text" placeholder="Description"><br></label>
+    <label>Stink Level: <input name='stank_level' type="text" placeholder="Stink Level"><br></label>
+    <label>Image Link: <input name='image_url' type="text" placeholder="Image Link"><br></label>
+    <button>Submit</button>
+  </form>
+
+<%= render 'footer' %>

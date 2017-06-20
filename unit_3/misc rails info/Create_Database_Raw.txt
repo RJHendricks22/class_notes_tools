@@ -1,0 +1,49 @@
+rails new project_tracker_shoebill --database=postgresql
+cd project_tracker_shoebill/
+subl .
+
+  CHECK FOR POSTGRESQL
+  Open config directory
+  Check database.yml
+  if adapter: postgresql == YAY!
+
+3 Migration Files:
+
+rails generate model User name:string email:string
+rails generate model Project name:string url:string user:references
+rails generate model Comment text:string project:references
+
+  db/
+    migrate/
+      20170418143531_create_users.rb
+      20170418143631_create_projects.rb
+      20170418143759_create_comments.rb
+  
+Run Database:
+rails db:create
+
+Looks at Migration Folders and Puts Stuff in the Database:
+rails db:migrate
+
+psql
+\c project_tracker_shoebill_development
+\dt
+
+Change Database/Table Information:
+
+rails generate migration add_age_to_users age:integer
+rails generate migration add_last_name_to_users last_name:string
+rails g migration ChangeColumnName
+
+  (WITH:)
+  def change
+    rename_column :users, :name, :first_name
+  end
+
+Re-Run Database/Migration:
+rails db:migrate
+
+Generates Files Needed for Users:
+rails g controller users
+
+rails db:seed
