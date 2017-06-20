@@ -1,0 +1,8 @@
+<%= render 'header' %>
+
+<div id="container">
+  <img src="<%= @rock[:image] %>">
+  <h2><strong>Rock Name: <%= @rock[:name] %></strong></h2>
+  <h4>Description: <%= @rock[:description] %></h4>
+  <h4><a href="/rocks/<%= @rock[:id] %>/edit">Edit this rock!</a></h4>
+</div>

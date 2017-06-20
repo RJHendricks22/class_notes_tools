@@ -1,0 +1,12 @@
+<%= render 'header' %>
+
+<div id="container">
+  <h2>Rock list:</h2>
+  <ul>
+    <% @rocks.each do |rock| %>
+      <li><a href="/rocks/<%= rock[:id] %>"><%= rock[:name] %></a></li>
+    <% end %>
+  </ul>
+  <br>
+  <h2><a href="/rocks/new">Create a new rock!</a></h2>
+</div>

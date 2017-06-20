@@ -1,0 +1,10 @@
+
+<h1>Update the <%= @rock[:name] %></h1>
+<%= render 'home' %>
+
+<%= form_for @rock do |f| %>
+  Name: <%= text_field_tag :name, @rock.name %><br />
+  Description : <%= text_field_tag :description, @rock.description %><br />
+  Image Link : <%= text_area_tag :image, @rock.image %><br />
+  <%= f.submit %>
+<% end %>
