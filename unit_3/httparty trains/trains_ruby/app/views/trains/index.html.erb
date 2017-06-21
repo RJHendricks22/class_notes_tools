@@ -1,0 +1,7 @@
+<h1>Test page 1</h1>
+
+<% @body.each do |trains| %>
+
+<h1><a href="/<%= trains["name"] %>"><%= trains["name"] %></a></p></h1>
+
+<% end %>
