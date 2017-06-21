@@ -1,0 +1,6 @@
+<div id="container">
+  <h2>List of compliments, choose one to edit!</h2>
+  <% @compliments.each do |compliment| %>
+    <p><%= compliment[:text] %></p> - <a href="/compliments/<%=compliment[:id] %>/edit">Edit/Delete this compliment</a>
+  <% end %>
+</div>

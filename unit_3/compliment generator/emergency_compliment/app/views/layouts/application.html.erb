@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EmergencyCompliment</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1>The nice compliment generator!</h1>
+    <h3>Putting a smile on your face, one compliment at a time :)</h3>
+    <br>
+    <hr>
+    <%= yield %>
+  </body>
+</html>

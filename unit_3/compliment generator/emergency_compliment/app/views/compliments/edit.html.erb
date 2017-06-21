@@ -1,0 +1,7 @@
+
+
+<%= form_for @compliment do |f| %>
+  Text: <%= text_field_tag :text, @compliment.text %><br />
+  <%= f.submit %>
+<% end %>
+  <%= link_to "Remove Compliment", @compliment, method: :delete %>
